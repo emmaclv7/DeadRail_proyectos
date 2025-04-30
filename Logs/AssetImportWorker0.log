@@ -2410,3 +2410,73 @@ Received Import Request.
 Start importing Assets/Scripts/Rendering using Guid(584a1f480449f884fa3a36d5728dfb40) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5ea66864c2d7007654f17ccf0ed4123d') in 0.068898 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
 
+========================================================================
+Received Import Request.
+  Time since last request: 112.581595 seconds.
+  path: Assets/Scripts/Rendering/New Universal Render Pipeline Asset.asset
+  artifactKey: Guid(30612fe23e7fa504d9e3d23ec00cd820) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Rendering/New Universal Render Pipeline Asset.asset using Guid(30612fe23e7fa504d9e3d23ec00cd820) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'eb5ae4a9b8da1160961b723a3739c080') in 0.024673 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 25.402822 seconds.
+  path: Assets/Settings/UniversalRP.asset
+  artifactKey: Guid(681886c5eb7344803b6206f758bf0b1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Settings/UniversalRP.asset using Guid(681886c5eb7344803b6206f758bf0b1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '910a3316ce45b604f98c2ad003aa3cfb') in 0.0010135 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 4.03 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 13 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 13 unused Assets / (1.8 MB). Loaded Objects now: 7352.
+Memory consumption went from 145.3 MB to 143.5 MB.
+Total: 13.122000 ms (FindLiveObjects: 1.005900 ms CreateObjectMapping: 0.852000 ms MarkObjects: 10.565900 ms  DeleteObjects: 0.696200 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 12.253307 seconds.
+  path: Assets/Scripts/Rendering/New Universal Render Pipeline Asset.asset
+  artifactKey: Guid(30612fe23e7fa504d9e3d23ec00cd820) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Rendering/New Universal Render Pipeline Asset.asset using Guid(30612fe23e7fa504d9e3d23ec00cd820) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a99b45277bcf5f2b8084e11bd37cd92a') in 0.0215713 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.127723 seconds.
+  path: Assets/cowboy body.png
+  artifactKey: Guid(f908dd8b3c763b14f8e06dd79a62a79a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/cowboy body.png using Guid(f908dd8b3c763b14f8e06dd79a62a79a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '44e7f3e5deaeb862e2f595c66c119936') in 0.0555095 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/InputSystem_Actions.inputactions
+  artifactKey: Guid(2bcd2660ca9b64942af0de543d8d7100) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/InputSystem_Actions.inputactions using Guid(2bcd2660ca9b64942af0de543d8d7100) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a9999bf77c8aa4fa2c34fd9c4eaab61b') in 0.0042441 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 19
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/cowboy_definitivo.png
+  artifactKey: Guid(bfc2c25f22e97d545b3b8946414bfce7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/cowboy_definitivo.png using Guid(bfc2c25f22e97d545b3b8946414bfce7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7278d9718ae6d094718f80f1fe418af7') in 0.0228505 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/DefaultVolumeProfile.asset
+  artifactKey: Guid(3f9215ea0144899419cfbc0957140d3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DefaultVolumeProfile.asset using Guid(3f9215ea0144899419cfbc0957140d3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bc332fdecfdb42ee88308f9934b4aba0') in 0.0013523 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

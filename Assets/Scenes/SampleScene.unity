@@ -609,6 +609,9 @@ MonoBehaviour:
   obstacleMask:
     serializedVersion: 2
     m_Bits: 64
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!23 &570903575
 MeshRenderer:
   m_ObjectHideFlags: 0

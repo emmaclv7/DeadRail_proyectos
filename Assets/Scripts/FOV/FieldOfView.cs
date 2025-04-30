@@ -35,6 +35,7 @@ public class FieldOfView : MonoBehaviour
     public float viewDistance = 8f; //Distancia de la vision
     public int rayCount = 60; //Número de rallos lanzados para formar lo que se ve en el campo de vision
     public LayerMask obstacleMask; //Máscara de capas
+    public LayerMask groundMask; //Máscara de capas
 
     private Mesh viewMesh; //Malla que se encarga de representar el campo de visión visualmente
     private Vector3 origin; //Posición donde se va a mover el rango de visión
@@ -83,7 +84,7 @@ public class FieldOfView : MonoBehaviour
             Vector3 dir = GetDirectionFromAngle(angle); //Ese ángulo se convierte en una dirección
             Vector3 vertex; //el punto final del rayo
 
-            RaycastHit2D hit = Physics2D.Raycast(origin, dir, viewDistance, obstacleMask); //Lanzamos un raycast por si se choca con algo
+            RaycastHit2D hit = Physics2D.Raycast(origin, dir, viewDistance, obstacleMask | groundMask); //Lanzamos un raycast por si se choca con algo
             vertex = (hit.collider != null) ? hit.point : origin + dir * viewDistance; // si colisiona usamos el punto de impacto y sino el punto más lejano de la dirección
 
             vertices[vertexIndex] = vertex; //Guardamos el vértice en el array

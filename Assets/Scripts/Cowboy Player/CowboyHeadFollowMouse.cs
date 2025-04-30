@@ -9,37 +9,39 @@ public class CowboyHeadFollowMouse : MonoBehaviour
 
     public Transform bodyTransform; //transform del parent cuerpo
     public float rotationOffset = 0f; //offset para calcular el angulo de rotación de la cabeza
+    public FieldOfView fov;
 
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>(); 
         initialScale = transform.localScale;
+        fov.SetOrigin(transform.position);
     }
 
     void Update()
     {
-        //Obtener toda la dirección de donde esta el mouse 
+        // Obtener toda la dirección de donde está el mouse
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         direction = mousePosition - transform.position;
         direction.z = 0;
 
-        //booleano para comprobar si el cuerpo esta flipeado (+1 derecha / -1 izquierda) 
+        // Booleano para comprobar si el cuerpo está flipeado (+1 derecha / -1 izquierda)
         bool bodyFlipped = bodyTransform.localScale.x < 0f;
 
-        if (bodyFlipped) //Sistema hardcodeado porque hay un bug que los controles se invierten cuando el cuerpo esta flipeado
+        // Sistema hardcodeado porque hay un bug que los controles se invierten cuando el cuerpo está flipeado
+        if (bodyFlipped)
         {
             direction.x = -direction.x;
             direction.y = -direction.y;
         }
 
-        //calcular angulo de la cabeza
+        // Calcular ángulo de la cabeza
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-        //aplicar la rotacion del angulo
+        // Aplicar la rotación del ángulo
         transform.rotation = Quaternion.Euler(0f, 0f, angle + rotationOffset);
 
-
-        //flipear la cabez adependiendo de si esta en el eje Y del mouse y del cuerpo
+        // Flipear la cabeza dependiendo de si está en el eje X del mouse y del cuerpo
         if ((mousePosition.x < transform.position.x && !bodyFlipped) ||
             (mousePosition.x > transform.position.x && bodyFlipped))
         {
@@ -49,6 +51,15 @@ public class CowboyHeadFollowMouse : MonoBehaviour
         {
             transform.localScale = new Vector3(initialScale.x, Mathf.Abs(initialScale.y), initialScale.z);
         }
+
+        // Actualizar el campo de visión:
+        // Se pasa la posición actual de la cabeza como origen
+        fov.SetOrigin(transform.position);
+
+        // Se pasa la dirección en la que mira la cabeza usando su rotación real
+        // transform.right apunta hacia la derecha local del objeto
+        Vector3 headForward = transform.right * (bodyFlipped ? -1f : 1f); // corregimos si el cuerpo está flipeado
+        fov.SetAimDirection(headForward);
     }
 }
 

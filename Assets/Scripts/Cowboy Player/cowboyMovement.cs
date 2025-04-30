@@ -6,6 +6,8 @@ using UnityEngine.Rendering;
 
 public class cowboyMovement : MonoBehaviour
 {
+    public FieldOfView fov;
+
     private float horizontalMovement;
     private float speed = 3f;
     private float jumpingPower = 4f;
@@ -19,6 +21,7 @@ public class cowboyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        fov.SetOrigin(transform.position);
         horizontalMovement = Input.GetAxisRaw("Horizontal");
 
         //si presionamos w y está en el suelo salta

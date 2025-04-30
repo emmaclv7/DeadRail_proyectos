@@ -6,10 +6,11 @@ public class CowboyHeadFollowMouse : MonoBehaviour
     private Vector3 direction; //vector de la direccion
     private Vector3 initialScale; //vector de la escala (necesaria para flipear el asset de la cabeza)
     private SpriteRenderer spriteRenderer; //la referencia al componente sprite renderer
+    [SerializeField] private FieldOfView fov; // Referencia a la clase FieldOfView para calcular por donde puede ver
 
     public Transform bodyTransform; //transform del parent cuerpo
     public float rotationOffset = 0f; //offset para calcular el angulo de rotación de la cabeza
-    public FieldOfView fov;
+
 
     void Start()
     {
@@ -52,13 +53,12 @@ public class CowboyHeadFollowMouse : MonoBehaviour
             transform.localScale = new Vector3(initialScale.x, Mathf.Abs(initialScale.y), initialScale.z);
         }
 
-        // Actualizar el campo de visión:
-        // Se pasa la posición actual de la cabeza como origen
+        // Actualizar el campo de visión, se pasa la posición actual de la cabeza como origen
         fov.SetOrigin(transform.position);
 
-        // Se pasa la dirección en la que mira la cabeza usando su rotación real
+        // Se pasa la dirección en la que mira la cabeza usando su rotación real y corregimos si el cuerpo está flipeado
         // transform.right apunta hacia la derecha local del objeto
-        Vector3 headForward = transform.right * (bodyFlipped ? -1f : 1f); // corregimos si el cuerpo está flipeado
+        Vector3 headForward = transform.right * (bodyFlipped ? -1f : 1f); 
         fov.SetAimDirection(headForward);
     }
 }

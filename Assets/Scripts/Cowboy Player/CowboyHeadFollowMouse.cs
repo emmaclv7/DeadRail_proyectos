@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CowboyHeadFollowMouse : MonoBehaviour
@@ -6,7 +7,8 @@ public class CowboyHeadFollowMouse : MonoBehaviour
     private Vector3 direction; //vector de la direccion
     private Vector3 initialScale; //vector de la escala (necesaria para flipear el asset de la cabeza)
     private SpriteRenderer spriteRenderer; //la referencia al componente sprite renderer
-    [SerializeField] private FieldOfView fov; // Referencia a la clase FieldOfView para calcular por donde puede ver
+    [SerializeField] private FieldOfView fovCone;
+    [SerializeField] private FieldOfView fovArea;// Referencia a la clase FieldOfView para calcular por donde puede ver
 
     public Transform bodyTransform; //transform del parent cuerpo
     public float rotationOffset = 0f; //offset para calcular el angulo de rotación de la cabeza
@@ -16,7 +18,8 @@ public class CowboyHeadFollowMouse : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>(); 
         initialScale = transform.localScale;
-        fov.SetOrigin(transform.position);
+        fovCone.SetOrigin(transform.position);
+        fovArea.SetOrigin(transform.position);
     }
 
     void Update()
@@ -54,12 +57,15 @@ public class CowboyHeadFollowMouse : MonoBehaviour
         }
 
         // Actualizar el campo de visión, se pasa la posición actual de la cabeza como origen
-        fov.SetOrigin(transform.position);
+        fovCone.SetOrigin(transform.position);
+        fovArea.SetOrigin(transform.position);
+
 
         // Se pasa la dirección en la que mira la cabeza usando su rotación real y corregimos si el cuerpo está flipeado
         // transform.right apunta hacia la derecha local del objeto
-        Vector3 headForward = transform.right * (bodyFlipped ? -1f : 1f); 
-        fov.SetAimDirection(headForward);
+        Vector3 headForward = transform.right * (bodyFlipped ? -1f : 1f);
+        fovCone.SetAimDirection(headForward);
+        fovArea.SetAimDirection(headForward);
     }
 }
 

@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1706.6667
     height: 869.3334
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Game
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 97
+  controlID: 37
   draggingID: 0
 --- !u!114 &3
 MonoBehaviour:
@@ -343,9 +343,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: aeae0000
-    m_LastClickedID: 44718
-    m_ExpandedIDs: 00000000aeae000000ca9a3bffffff7f
+    m_SelectedIDs: b0ae0000
+    m_LastClickedID: 44720
+    m_ExpandedIDs: 00000000b0ae000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -374,7 +374,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000aeae0000
+    m_ExpandedIDs: 00000000b0ae0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -402,7 +402,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c623000072900000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1112,9 +1112,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 1.2268685, y: 0.9652948, z: -0.015742544}
+    m_Target: {x: 0.44016594, y: 1.1366252, z: -0.020039579}
     speed: 2
-    m_Value: {x: 1.115506, y: 0.95554906, z: -0.016507942}
+    m_Value: {x: 0.44016594, y: 1.1366252, z: -0.020039579}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1164,9 +1164,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 1.6243368
+    m_Target: 2.0540464
     speed: 2
-    m_Value: 1.7008762
+    m_Value: 2.0540464
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1294,7 +1294,7 @@ MonoBehaviour:
       height: 254.19363
     m_MinimalGUI: 1
   m_defaultScale: 0.6041667
-  m_LastWindowPixelSize: {x: 1029.3333, y: 456}
+  m_LastWindowPixelSize: {x: 1543.9999, y: 684}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000

@@ -62,7 +62,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\ImpactEffect.cs" />
-    <Compile Include="Assets\Scripts\UICrashEffect.cs" />
     <Compile Include="Assets\TrainSpawner.cs" />
     <Compile Include="Assets\Scripts\cowboyMovement.cs" />
   </ItemGroup>

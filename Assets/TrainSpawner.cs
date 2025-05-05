@@ -16,6 +16,7 @@ public class TrainSpawner : MonoBehaviour
     void Start()
     {
         //para poder ejecutar el movimiento del tren sin bloquear el juego
+        transform.localScale = Vector3.zero;//para asegurar que empieza invisible
         StartCoroutine(TrainAppearece());
     }
     private IEnumerator TrainAppearece()
@@ -23,11 +24,13 @@ public class TrainSpawner : MonoBehaviour
         //bucle infinito
         while (true)
         {
+            timer = 0f;
+
             float waitingTime = Random.Range(minInterval, maxInterval); //genara un numero aleatorio entre los intervalos
             yield return new WaitForSeconds(waitingTime);
 
-            Vector2 initialSize = Vector2.zero; //cuánto mide inicialmente
-            Vector2 maximumSize = new Vector2(maxSize, maxSize); //cuánto va a crecer
+            Vector2 initialSize = Vector3.zero; //cuánto mide inicialmente
+            Vector2 maximumSize = new Vector3(maxSize, maxSize, maxSize); //cuánto va a crecer
 
             timer = 0f;
             while (timer < growTime)
@@ -47,12 +50,12 @@ public class TrainSpawner : MonoBehaviour
             while (timer < growTime)
             {
                 //ahora pasa del tamaño máximo a 0
-                transform.localScale = Vector3.Lerp(maximumSize, Vector2.zero, timer / growTime);
+                transform.localScale = Vector3.Lerp(maximumSize, initialSize, timer / growTime);
                 timer += Time.deltaTime;
                 yield return null;
             }
 
-            transform.localScale = Vector2.zero;
+            transform.localScale = Vector3.zero;
             isMaxSize = false;
         }
        

@@ -61,6 +61,8 @@
     <Analyzer Include="E:\UNity\6000.0.47f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\ImpactEffect.cs" />
+    <Compile Include="Assets\Scripts\UICrashEffect.cs" />
     <Compile Include="Assets\TrainSpawner.cs" />
     <Compile Include="Assets\Scripts\cowboyMovement.cs" />
   </ItemGroup>

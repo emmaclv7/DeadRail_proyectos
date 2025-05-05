@@ -8,6 +8,9 @@ public class TrainSpawner : MonoBehaviour
     public float maxSize = 6f; //la medida máxima en la que crece el tren
     public bool isMaxSize = false; //si el tren ha llegado al máximo tamaño
     public Sprite[] trainSprites; // array de sprites para elegir el tren
+    public GameObject impactEffectPrefab;
+    public GameObject crashUIEffectPrefab;
+    public Canvas uiCanvas;
 
     public float visibleTime = 60f; //tiempo en el que el tren está quieto
     public float maxInterval = 120f; //máximo intervalo en el que el tren puede aparecer
@@ -37,17 +40,11 @@ public class TrainSpawner : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            if (impactEffectPrefab != null)
+            {
+                GameObject impactEffect = Instantiate(impactEffectPrefab, collision.transform.position, Quaternion.identity);
+            }
             Destroy(collision.gameObject);
-        }
-    }
-    private void OnDrawGizmosSelected()
-    {
-        BoxCollider2D col = GetComponent<BoxCollider2D>();
-        if (col != null)
-        {
-            Gizmos.color = Color.red;
-            Gizmos.matrix = transform.localToWorldMatrix;
-            Gizmos.DrawWireCube(col.offset, col.size);
         }
     }
     private IEnumerator TrainAppearece()

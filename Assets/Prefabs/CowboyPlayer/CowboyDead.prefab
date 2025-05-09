@@ -106,7 +106,7 @@ MonoBehaviour:
   stickDuration: 1.2
   initialFallSpeed: 0.05
   finalFallSpeed: 2
-  fallAcceleration: 0.1
+  fallAcceleration: 0.2
   arcIntensity: 0.3
   startScale: 0.1
   finalScale: 10

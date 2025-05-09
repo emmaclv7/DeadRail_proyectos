@@ -326,7 +326,7 @@ GameObject:
   - component: {fileID: 499855526}
   - component: {fileID: 499855525}
   - component: {fileID: 499855529}
-  - component: {fileID: 499855528}
+  - component: {fileID: 499855530}
   m_Layer: 0
   m_Name: cowboy_body
   m_TagString: Player
@@ -425,30 +425,13 @@ Transform:
   m_GameObject: {fileID: 499855524}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.79, y: 0.15, z: 0}
+  m_LocalPosition: {x: 0.79, y: 0.673, z: 0}
   m_LocalScale: {x: 2.7718, y: 2.7718, z: 2.7718}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2037988968}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &499855528
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 499855524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e97c04f03939b7049b42ed9db9122962, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 499855525}
-  groundCheck: {fileID: 44121086}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 8
 --- !u!61 &499855529
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -495,6 +478,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.24, y: 0.17}
   m_EdgeRadius: 0
+--- !u!114 &499855530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499855524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e97c04f03939b7049b42ed9db9122962, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -822,8 +818,8 @@ Transform:
   m_GameObject: {fileID: 2037988967}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.003, y: 0.127, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.003, y: 0.128, z: 0}
+  m_LocalScale: {x: 1, y: 0.9923, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 499855527}

@@ -1,37 +1,41 @@
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PointHandler : MonoBehaviour
 {
-   
-
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Vector2 mousePostion = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            RaycastHit2D hit = Physics2D.Raycast(mousePostion, Vector2.zero);
+            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
+
             if (hit.collider != null)
             {
-                Debug.Log("hit");
-                ExecuteClick();
+                ExecuteClick(hit.collider.gameObject.tag);
             }
         }
-    
     }
 
-    private void ExecuteClick () {
-        if (tag == "Start")
+    private void ExecuteClick(string objectTag)
+    {
+        switch (objectTag)
         {
-            SceneManager.LoadScene("MainGame");
+            case "Start":
+                SceneManager.LoadScene("MainGame");
+                break;
+
+            case "MainMenu":
+                SceneManager.LoadScene("MainMenu");
+                break;
+
+            case "Exit":
+                Application.Quit();
+                break;
+
+            default:
+                Debug.Log("Unknown Tag" + objectTag);
+                break;
         }
-        else if (tag == "MainMenu")
-        {
-            SceneManager.LoadScene("MainMenu");
-        }
-        else if (tag == "Exit") { Application.Quit(); }
-        else {}
     }
 }

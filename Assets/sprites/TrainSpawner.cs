@@ -9,8 +9,6 @@ public class TrainSpawner : MonoBehaviour
     public bool isMaxSize = false; //si el tren ha llegado al máximo tamaño
     public Sprite[] trainSprites; // array de sprites para elegir el tren
     public GameObject impactEffectPrefab;
-    public GameObject crashUIEffectPrefab;
-    public Canvas uiCanvas;
 
     public float visibleTime = 60f; //tiempo en el que el tren está quieto
     public float maxInterval = 120f; //máximo intervalo en el que el tren puede aparecer

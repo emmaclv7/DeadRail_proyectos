@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 4073311489992538380}
   - component: {fileID: 6111300662918656090}
   m_Layer: 7
-  m_Name: FOV_area
+  m_Name: 'FOV_area '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

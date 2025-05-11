@@ -896,57 +896,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16ca2190f798a654d963f0a4f15ec3c2, type: 3}
---- !u!1 &925703217 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6811809663532487901, guid: 1e7ede551398ede4ab645e700ac9e7fd, type: 3}
-  m_PrefabInstance: {fileID: 288880843401938109}
-  m_PrefabAsset: {fileID: 0}
---- !u!61 &925703223
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 925703217}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.24, y: 0.19}
-    newSize: {x: 0.24, y: 0.19}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 0.24, y: 0.19}
-  m_EdgeRadius: 0
 --- !u!1001 &999400030
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1002,10 +951,6 @@ PrefabInstance:
     - target: {fileID: 3660121013814407141, guid: 16ca2190f798a654d963f0a4f15ec3c2, type: 3}
       propertyPath: m_Name
       value: Train prefab (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3660121013814407141, guid: 16ca2190f798a654d963f0a4f15ec3c2, type: 3}
-      propertyPath: m_Layer
-      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1612,37 +1557,9 @@ PrefabInstance:
       propertyPath: fovCone
       value: 
       objectReference: {fileID: 1191690785}
-    - target: {fileID: 2184671999881029999, guid: 1e7ede551398ede4ab645e700ac9e7fd, type: 3}
-      propertyPath: m_BodyType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2184671999881029999, guid: 1e7ede551398ede4ab645e700ac9e7fd, type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2184671999881029999, guid: 1e7ede551398ede4ab645e700ac9e7fd, type: 3}
-      propertyPath: m_AngularDamping
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2899014862314730963, guid: 1e7ede551398ede4ab645e700ac9e7fd, type: 3}
-      propertyPath: m_SortingOrder
-      value: 25
-      objectReference: {fileID: 0}
     - target: {fileID: 6811809663532487901, guid: 1e7ede551398ede4ab645e700ac9e7fd, type: 3}
       propertyPath: m_Name
       value: cowboy player
-      objectReference: {fileID: 0}
-    - target: {fileID: 9116878594699451654, guid: 1e7ede551398ede4ab645e700ac9e7fd, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 3.57
-      objectReference: {fileID: 0}
-    - target: {fileID: 9116878594699451654, guid: 1e7ede551398ede4ab645e700ac9e7fd, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 3.57
-      objectReference: {fileID: 0}
-    - target: {fileID: 9116878594699451654, guid: 1e7ede551398ede4ab645e700ac9e7fd, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.7239324
       objectReference: {fileID: 0}
     - target: {fileID: 9116878594699451654, guid: 1e7ede551398ede4ab645e700ac9e7fd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1684,18 +1601,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9116878594699451654, guid: 1e7ede551398ede4ab645e700ac9e7fd, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5747941874904801126, guid: 1e7ede551398ede4ab645e700ac9e7fd, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6811809663532487901, guid: 1e7ede551398ede4ab645e700ac9e7fd, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 925703223}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e7ede551398ede4ab645e700ac9e7fd, type: 3}
 --- !u!1001 &572102323008671560
 PrefabInstance:
@@ -1805,18 +1714,6 @@ PrefabInstance:
     - target: {fileID: 1920777443817514449, guid: 754da7b5d1c99ec4ab8f36e69aa0d2f5, type: 3}
       propertyPath: m_Name
       value: train station prefab
-      objectReference: {fileID: 0}
-    - target: {fileID: 2708032681014857609, guid: 754da7b5d1c99ec4ab8f36e69aa0d2f5, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8361921657758176805, guid: 754da7b5d1c99ec4ab8f36e69aa0d2f5, type: 3}
-      propertyPath: m_SortingOrder
-      value: 210
-      objectReference: {fileID: 0}
-    - target: {fileID: 9140229351415623918, guid: 754da7b5d1c99ec4ab8f36e69aa0d2f5, type: 3}
-      propertyPath: m_Layer
-      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

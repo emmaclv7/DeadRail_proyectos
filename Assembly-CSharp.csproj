@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\Menu\WindEfect\SideToSide.cs" />
     <Compile Include="Assets\Scripts\Menu\MainMenu\PointHandler.cs" />
     <Compile Include="Assets\Scripts\Cowboy Player\CowboyHeadFollowMouse.cs" />
+    <Compile Include="Assets\Scripts\Debugscript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

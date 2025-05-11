@@ -16,6 +16,8 @@ public class TrainSpawner : MonoBehaviour
     public float maxInterval = 120f; //máximo intervalo en el que el tren puede aparecer
     public float minInterval = 60f; //mínimo intervalo en el que el tren puede aparecer
 
+    public GameOverScript gameOverManager; //llama a la clase que maneja la interfaz del game over
+
     private SpriteRenderer spriteRenderer;
 
     [SerializeField] private BoxCollider2D triggerCollider;
@@ -45,6 +47,7 @@ public class TrainSpawner : MonoBehaviour
                 GameObject impactEffect = Instantiate(impactEffectPrefab, collision.transform.position, Quaternion.identity);
             }
             Destroy(collision.gameObject);
+            gameOverManager.gameOver(); //sale la interfaz game over
         }
     }
     private IEnumerator TrainAppearece()

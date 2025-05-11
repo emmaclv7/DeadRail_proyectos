@@ -25,7 +25,7 @@ public class PointHandler : MonoBehaviour
     private void ExecuteClick () {
         if (tag == "Start")
         {
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene("MainGame");
         }
         else if (tag == "MainMenu")
         {

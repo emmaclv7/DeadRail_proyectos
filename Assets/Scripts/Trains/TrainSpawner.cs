@@ -18,8 +18,8 @@ public class TrainSpawner : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
 
-    [SerializeField] private BoxCollider2D triggerCollider;
-    [SerializeField] private BoxCollider2D solidCollider;
+    [SerializeField] private Collider2D triggerCollider;
+    [SerializeField] private Collider2D solidCollider;
     
 
 

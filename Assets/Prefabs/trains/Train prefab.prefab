@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 8842516506729399261}
   - component: {fileID: 2314890644317601247}
   - component: {fileID: 8752912033644416839}
-  - component: {fileID: 196198943588654699}
-  m_Layer: 0
+  - component: {fileID: 1610605678851637906}
+  m_Layer: 6
   m_Name: Train prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,13 +110,12 @@ MonoBehaviour:
   - {fileID: 7114885465217784225, guid: 682ce1d508759fe4c99eb0fa2342e163, type: 3}
   - {fileID: -7786792524992636962, guid: cc5a5daa2352a1f44a10e73e92fb2e49, type: 3}
   impactEffectPrefab: {fileID: 5083589484872314471, guid: 4603e911533df8a40b05a66b0b8cbac1, type: 3}
-  crashUIEffectPrefab: {fileID: 4546383436224205346, guid: a723c95e3ca1a5b4dbedde01466474ec, type: 3}
-  uiCanvas: {fileID: 0}
   visibleTime: 30
   maxInterval: 2
   minInterval: 1
+  gameOverManager: {fileID: 0}
   triggerCollider: {fileID: 8752912033644416839}
-  solidCollider: {fileID: 196198943588654699}
+  solidCollider: {fileID: 1610605678851637906}
 --- !u!61 &8752912033644416839
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -163,8 +162,8 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.44, y: 0.65}
   m_EdgeRadius: 0
---- !u!61 &196198943588654699
-BoxCollider2D:
+--- !u!70 &1610605678851637906
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -197,15 +196,6 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.0012554675, y: 0.31907755}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.49714664, y: 0.009111524}
-    oldSize: {x: 0.44, y: 0.65}
-    newSize: {x: 0.44, y: 0.65}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 0.44, y: 0.65}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0, y: 0.26}
+  m_Size: {x: 0.4, y: 0.55}
+  m_Direction: 0

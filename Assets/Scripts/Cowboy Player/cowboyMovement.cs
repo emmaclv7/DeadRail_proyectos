@@ -1,31 +1,37 @@
-using System;
-using Unity.VisualScripting;
-using UnityEditor.Tilemaps;
 using UnityEngine;
-using UnityEngine.Rendering;
 
-public class cowboyMovement : MonoBehaviour
+public class CowboyMovement : MonoBehaviour
 {
     private float horizontalMovement;
     private float speed = 3f;
     private float jumpingPower = 4f;
-    private bool isFacingRight = true; //para que el sprite se gire cuando cuambio de direcci�n
+    private bool isFacingRight = true;
 
-    //para editar las variables privadas en el inspector de unity
+    private int jumpCount = 0;
+    private int maxJumps = 1;
+    private bool isGrounded = false;
+
     [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private Transform groundCheck;
-    [SerializeField] private LayerMask groundLayer;
 
-    // Update is called once per frame
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
+
     void Update()
     {
-        
         horizontalMovement = Input.GetAxisRaw("Horizontal");
 
-        //si presionamos w y está en el suelo salta
-        if (Input.GetKeyDown(KeyCode.W) && IsGrounded())
+        if (isGrounded)
+        {
+            jumpCount = 0;
+        }
+
+        if (Input.GetKeyDown(KeyCode.W) && jumpCount < maxJumps)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpingPower);
+            jumpCount++;
+            Debug.Log("Jump count: " + jumpCount);
         }
 
         Flip();
@@ -35,21 +41,33 @@ public class cowboyMovement : MonoBehaviour
     {
         rb.linearVelocity = new Vector2(horizontalMovement * speed, rb.linearVelocity.y);
     }
-    private bool IsGrounded()
-    {
-        //para saber si el personaje está tocando el suelo
-        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
-    }
 
     private void Flip()
     {
-        //para que el jugador se gire cuando se cambia de dirección
         if (isFacingRight && horizontalMovement < 0f || !isFacingRight && horizontalMovement > 0f)
         {
             isFacingRight = !isFacingRight;
             Vector3 localScale = transform.localScale;
-            localScale.x *= -1f; //para invertir la escala en el eje x
+            localScale.x *= -1f;
             transform.localScale = localScale;
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+
+        foreach (ContactPoint2D contact in collision.contacts)
+        {
+            if (contact.normal.y > 0.5f) 
+            {
+                isGrounded = true;
+                break;
+            }
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        isGrounded = false;
     }
 }
